@@ -56,10 +56,10 @@
 //! # use static_regular_grammar::RegularGrammar;
 //! /// Example grammar.
 //! #[derive(RegularGrammar)]
-//! #[grammar(file = "examples/test.abnf", entry_point = "bar")]
-//! pub struct Bar([u8]);
+//! #[grammar(file = "examples/test.abnf")]
+//! pub struct Foo([u8]);
 //!
-//! let bar = Bar::new(b"baaaar").unwrap();
+//! let foo = Foo::new(b"foo").unwrap();
 //! ```
 //!
 //! # ASCII
@@ -71,10 +71,10 @@
 //! # use static_regular_grammar::RegularGrammar;
 //! #[derive(RegularGrammar)]
 //! #[grammar(file = "examples/test.abnf", ascii)]
-//! pub struct Bar([u8]);
+//! pub struct Foo([u8]);
 //!
-//! let bar = Bar::new(b"baaaar").unwrap();
-//! println!("{bar}");
+//! let foo = Foo::new(b"foo").unwrap();
+//! println!("{foo}");
 //! ```
 //!
 //! # Sized Type
